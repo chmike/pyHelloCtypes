@@ -2,9 +2,9 @@
 #include <string.h>
 #include <stdlib.h>
 
-#ifdef _MSC_VER
+//#ifdef _MSC_VER
 #define _CRT_SECURE_NO_WARNINGS 1
-#endif
+//#endif
 
 
 // hello return a heap allocated string containing the name appended 
