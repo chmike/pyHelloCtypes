@@ -2,6 +2,10 @@
 #include <string.h>
 #include <stdlib.h>
 
+#ifdef _WIN32
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+
 
 // hello return a heap allocated string containing the name appended 
 // to "hello " and followed by "!".
