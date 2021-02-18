@@ -1,6 +1,8 @@
 #ifdef _MSC_VER
 #define _CRT_SECURE_NO_WARNINGS 1
-int PyInit_ext;
+#define DllExport   __declspec( dllexport )
+DllExport int PyInit_ext; // hack to compile with setuptools as Extension
+DllExport char *hello(char *name);
 #endif
 
 #include <stdio.h>
