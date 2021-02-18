@@ -6,7 +6,7 @@ import platform
 import glob
 import os
 
-_lib = ct.cdll.LoadLibrary(glob.glob(os.path.join(__path__[0],'ext.*.so'))[0])
+_lib = ct.cdll.LoadLibrary(glob.glob(os.path.join(__path__[0],'ext.*'))[0])
 _lib.hello.argtypes = [ct.c_char_p]
 _lib.hello.restype = ct.c_void_p
 _libc = ct.cdll.LoadLibrary(\
