@@ -3,6 +3,7 @@
 #define DllExport   __declspec( dllexport )
 DllExport int PyInit_ext; // hack to compile with setuptools as Extension
 DllExport char *hello(char *name);
+DllExport void release(void*);
 #endif
 
 #include <stdio.h>
@@ -10,6 +11,10 @@ DllExport char *hello(char *name);
 #include <stdlib.h>
 
 
+
+void release(void *buf) {
+	free(buf);
+}
 
 // hello return a heap allocated string containing the name appended 
 // to "hello " and followed by "!".
