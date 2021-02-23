@@ -4,3 +4,4 @@ hello_chmike*
 hello/*.so
 *.pyc
 env
+hello.*
